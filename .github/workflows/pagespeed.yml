@@ -1,29 +1,12 @@
 name: PageSpeed Insights
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
 jobs:
   pagespeed:
-    runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Run PageSpeed Insights
         uses: JakePartusch/psi-action@v1.3
         with:
-          url: 'https://votre-site-web.com' # Remplacez par l'URL de votre site web
-          strategy: 'mobile' # Peut être 'mobile' ou 'desktop'
+          url: 'https://jolly-part.surge.sh/'
+          strategy: 'desktop'
           key: ${{ secrets.PAGESPEED_API_KEY }}
-
-      - name: Upload Report
-        uses: actions/upload-artifact@v2
-        with:
-          name: pagespeed-report
-          path: ./pagespeed-report.json
+          threshold: 70
