@@ -19,4 +19,4 @@ jobs:
           url: 'https://elfe-project.surge.sh/'
           strategy: 'desktop'
           key: ${{ secrets.PAGESPEED_API_KEY }}
-          threshold: 70
+          threshold: 100
