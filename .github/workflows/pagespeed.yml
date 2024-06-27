@@ -16,7 +16,7 @@ jobs:
       - name: Run PageSpeed Insights
         uses: JakePartusch/psi-action@v1.3
         with:
-          url: 'https://jolly-part.surge.sh/'
+          url: 'https://elfe-project.surge.sh/'
           strategy: 'desktop'
           key: ${{ secrets.PAGESPEED_API_KEY }}
           threshold: 70
